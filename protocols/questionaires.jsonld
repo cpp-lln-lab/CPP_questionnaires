@@ -1,0 +1,36 @@
+{
+    "@context": [
+      "https://raw.githubusercontent.com/ReproNim/reproschema/1.0.0-rc4/contexts/generic",
+      {
+        "rl": "https://raw.githubusercontent.com/Remi-Gau/reproschema-library/EHI/activities"
+      }
+    ],
+    "@type": "reproschema:Protocol",
+    "@id": "questionaires.jsonld",
+    "prefLabel": "pre experiment questionnaire",
+    "description": "pre experiment questionnaire",
+    "schemaVersion": "1.0.0-rc4",
+    "version": "0.0.1",
+    "landingPage": {
+      "@id": "README.md",
+      "@language": "en"
+    },
+    "ui": {
+      "addProperties": [
+        {
+          "isAbout": "../activities/demographics/demographics.jsonld",
+          "variableName": "demographics",
+          "prefLabel": { "en": "demographics" }
+        },
+        {
+          "isAbout": "/EHI/edinburgh_handedness_inventory_short",
+          "variableName": "EHI_short_schema",
+          "prefLabel": { "en": "EHI" }
+        }
+      ],
+      "order": [
+          "demographics",
+          "EHI_short_schema"
+          ]
+    }
+}
